@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ENGAJA | Produtos e Negociação</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/dashboard_principal.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         CABEÇALHO
+    =========================================== -->
+
+    <header class="header">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="./tela_inicial.html"
+            class="logo-header"
+        >
+
+            <img
+                src="./img/logo_engaja_lobo.png"
+                alt="Logo ENGAJA"
+            >
+
+            <div>
+
+                <h1>
+                    ENGA<span>JA</span>
+                </h1>
+
+                <p>
+                    Conexões que geram oportunidades.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PESQUISA -->
+
+        <div class="barra-pesquisa">
+
+            <span>
+                🔍
+            </span>
+
+            <input
+                type="text"
+                id="campoPesquisa"
+                placeholder="O que você está procurando?"
+            >
+
+            <button
+                type="button"
+                id="btnPesquisar"
+            >
+                Buscar
+            </button>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <a
+                href="#inicio"
+                class="ativo"
+            >
+                Início
+            </a>
+
+
+            <a href="#produtos">
+                Produtos
+            </a>
+
+
+            <a href="#como-funciona">
+                Como funciona
+            </a>
+
+
+
+            <!-- ==================================
+                 PERFIL
+            =================================== -->
+
+            <div class="perfil-menu">
+
+                <button
+                    type="button"
+                    class="btn-perfil"
+                    id="btnPerfil"
+                >
+
+                    <span class="icone-perfil">
+                        ●
+                    </span>
+
+                    <span>
+                        Meu perfil
+                    </span>
+
+                </button>
+
+
+
+                <!-- MENU DO PERFIL -->
+
+                <div
+                    class="perfil-dropdown"
+                    id="perfilDropdown"
+                >
+
+                    <div class="perfil-visitante">
+
+                        <div class="avatar-visitante">
+                            ●
+                        </div>
+
+                        <h3>
+                            Visitante
+                        </h3>
+
+                        <p>
+                            Você está navegando sem uma conta.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="btnEntrar"
+                        class="btn-entrar"
+                    >
+                        Entrar
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btnCriarConta"
+                        class="btn-criar-conta"
+                    >
+                        Criar conta
+                    </button>
+
+
+                    <p class="texto-login-futuro">
+
+                        Tenha acesso ao seu perfil,
+                        favoritos e negociações.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- ==========================================
+         BANNER
+    =========================================== -->
+
+    <section
+        class="banner"
+        id="inicio"
+    >
+
+        <div class="banner-texto">
+
+            <span class="mini-titulo">
+                ENGAJA
+            </span>
+
+
+            <h2>
+
+                Encontre.
+
+                <span>
+                    Conheça.
+                </span>
+
+                Negocie.
+
+            </h2>
+
+
+            <p>
+
+                Encontre produtos e lojas,
+                conheça as opções disponíveis
+                e converse diretamente
+                com quem vende.
+
+            </p>
+
+
+            <button
+                type="button"
+                class="btn-explorar"
+                id="btnExplorar"
+            >
+
+                Explorar produtos
+
+                <strong>
+                    →
+                </strong>
+
+            </button>
+
+
+            <small>
+                Você pode navegar sem criar uma conta.
+            </small>
+
+        </div>
+
+
+
+        <div class="banner-logo">
+
+            <img
+                src="./img/logo_engaja_lobo.png"
+                alt="ENGAJA"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CATEGORIAS
+    =========================================== -->
+
+    <section class="categorias">
+
+        <div class="titulo-secao">
+
+            <span>
+                ENCONTRE
+            </span>
+
+            <h2>
+                Explore por categoria
+            </h2>
+
+        </div>
+
+
+
+        <div class="categorias-grid">
+
+
+            <!-- VESTUÁRIO -->
+
+            <button
+                class="categoria"
+                data-categoria="Vestuário"
+                type="button"
+            >
+
+                <span>
+                    👕
+                </span>
+
+                <strong>
+                    Vestuário
+                </strong>
+
+                <small>
+                    Moda e acessórios
+                </small>
+
+            </button>
+
+
+
+            <!-- ELETRÔNICOS -->
+
+            <button
+                class="categoria"
+                data-categoria="Eletrônicos"
+                type="button"
+            >
+
+                <span>
+                    📱
+                </span>
+
+                <strong>
+                    Eletrônicos
+                </strong>
+
+                <small>
+                    Tecnologia
+                </small>
+
+            </button>
+
+
+
+            <!-- CASA -->
+
+            <button
+                class="categoria"
+                data-categoria="Casa"
+                type="button"
+            >
+
+                <span>
+                    🏠
+                </span>
+
+                <strong>
+                    Casa
+                </strong>
+
+                <small>
+                    Produtos para o lar
+                </small>
+
+            </button>
+
+
+
+            <!-- BELEZA -->
+
+            <button
+                class="categoria"
+                data-categoria="Beleza"
+                type="button"
+            >
+
+                <span>
+                    💄
+                </span>
+
+                <strong>
+                    Beleza
+                </strong>
+
+                <small>
+                    Cuidados pessoais
+                </small>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         LOJAS
+    =========================================== -->
+
+    <section
+        class="lojas"
+        id="lojas"
+    >
+
+        <div class="titulo-secao">
+
+            <span>
+                CONHEÇA
+            </span>
+
+            <h2>
+                Lojas para conhecer
+            </h2>
+
+        </div>
+
+
+
+        <div class="lojas-grid">
+
+
+            <!-- ==================================
+                 LOJA 1
+                 ESSÊNCIA & CIA
+            =================================== -->
+
+            <article class="loja-card">
+
+                <div class="loja-imagem">
+
+                    <img
+                        src="./img/loja_essencia.jpg"
+                        alt="Loja Essência e Cia"
+                    >
+
+                </div>
+
+                <div class="loja-info">
+
+                    <span class="loja-categoria">
+                        Beleza
+                    </span>
+
+                    <h3>
+                        Essência & Cia
+                    </h3>
+
+                    <p>
+                        Perfumaria e produtos
+                        de beleza.
+                    </p>
+
+                    <div class="loja-avaliacao">
+                        ⭐ 4,8
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-loja-card"
+                        data-loja="Essência & Cia"
+                    >
+                        Conhecer loja
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LOJA 2
+                 TECH STORE
+            =================================== -->
+
+            <article class="loja-card">
+
+                <div class="loja-imagem">
+
+                    <img
+                        src="./img/loja_tech.jpg"
+                        alt="Tech Store"
+                    >
+
+                </div>
+
+                <div class="loja-info">
+
+                    <span class="loja-categoria">
+                        Eletrônicos
+                    </span>
+
+                    <h3>
+                        Tech Store
+                    </h3>
+
+                    <p>
+                        Tecnologia e acessórios
+                        eletrônicos.
+                    </p>
+
+                    <div class="loja-avaliacao">
+                        ⭐ 4,7
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-loja-card"
+                        data-loja="Tech Store"
+                    >
+                        Conhecer loja
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LOJA 3
+                 FASHION STORE
+            =================================== -->
+
+            <article class="loja-card">
+
+                <div class="loja-imagem">
+
+                    <img
+                        src="./img/loja_fashion.jpg"
+                        alt="Fashion Store"
+                    >
+
+                </div>
+
+                <div class="loja-info">
+
+                    <span class="loja-categoria">
+                        Vestuário
+                    </span>
+
+                    <h3>
+                        Fashion Store
+                    </h3>
+
+                    <p>
+                        Moda, bolsas e
+                        acessórios.
+                    </p>
+
+                    <div class="loja-avaliacao">
+                        ⭐ 4,9
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-loja-card"
+                        data-loja="Fashion Store"
+                    >
+                        Conhecer loja
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 LOJA 4
+                 ESPORTE TOTAL
+            =================================== -->
+
+            <article class="loja-card">
+
+                <div class="loja-imagem">
+
+                    <img
+                        src="./img/loja_esporte.jpg"
+                        alt="Esporte Total"
+                    >
+
+                </div>
+
+                <div class="loja-info">
+
+                    <span class="loja-categoria">
+                        Esportes
+                    </span>
+
+                    <h3>
+                        Esporte Total
+                    </h3>
+
+                    <p>
+                        Produtos para esporte
+                        e atividade física.
+                    </p>
+
+                    <div class="loja-avaliacao">
+                        ⭐ 4,8
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-loja-card"
+                        data-loja="Esporte Total"
+                    >
+                        Conhecer loja
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         PRODUTOS
+    =========================================== -->
+
+    <section
+        class="produtos"
+        id="produtos"
+    >
+
+        <div class="titulo-produtos">
+
+            <div>
+
+                <span>
+                    DESTAQUES
+                </span>
+
+                <h2>
+                    Produtos para conhecer
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="btnVerTodos"
+            >
+                Ver todos
+            </button>
+
+        </div>
+
+
+
+        <div
+            class="produtos-grid"
+            id="listaProdutos"
+        >
+
+
+            <!-- ==================================
+                 PRODUTO 1
+                 TÊNIS
+            =================================== -->
+
+            <article
+                class="produto"
+                data-nome="Tênis Esportivo"
+                data-categoria="Vestuário"
+            >
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="./img/tenis.jpg"
+                        alt="Tênis Esportivo"
+                    >
+
+                    <span>
+                        Vestuário
+                    </span>
+
+                </div>
+
+
+                <div class="produto-info">
+
+                    <small>
+                        Esporte Total
+                    </small>
+
+                    <h3>
+                        Tênis Esportivo
+                    </h3>
+
+                    <p>
+                        Conforto e qualidade
+                        para o dia a dia.
+                    </p>
+
+                    <strong class="preco">
+                        R$ 179,90
+                    </strong>
+
+
+                    <button
+                        class="btn-produto"
+                        type="button"
+                        data-produto="Tênis Esportivo"
+                    >
+                        Conhecer produto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 PRODUTO 2
+                 SMARTPHONE
+            =================================== -->
+
+            <article
+                class="produto"
+                data-nome="Smartphone"
+                data-categoria="Eletrônicos"
+            >
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="./img/smartphone.jpg"
+                        alt="Smartphone"
+                    >
+
+                    <span>
+                        Eletrônicos
+                    </span>
+
+                </div>
+
+
+                <div class="produto-info">
+
+                    <small>
+                        Tech Store
+                    </small>
+
+                    <h3>
+                        Smartphone
+                    </h3>
+
+                    <p>
+                        Tecnologia para
+                        facilitar o dia a dia.
+                    </p>
+
+                    <strong class="preco">
+                        R$ 1.599,00
+                    </strong>
+
+
+                    <button
+                        class="btn-produto"
+                        type="button"
+                        data-produto="Smartphone"
+                    >
+                        Conhecer produto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 PRODUTO 3
+                 BOLSA
+            =================================== -->
+
+            <article
+                class="produto"
+                data-nome="Bolsa Feminina"
+                data-categoria="Vestuário"
+            >
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="./img/bolsa.jpg"
+                        alt="Bolsa Feminina"
+                    >
+
+                    <span>
+                        Vestuário
+                    </span>
+
+                </div>
+
+
+                <div class="produto-info">
+
+                    <small>
+                        Fashion Store
+                    </small>
+
+                    <h3>
+                        Bolsa Feminina
+                    </h3>
+
+                    <p>
+                        Estilo e praticidade
+                        para diferentes ocasiões.
+                    </p>
+
+                    <strong class="preco">
+                        R$ 109,90
+                    </strong>
+
+
+                    <button
+                        class="btn-produto"
+                        type="button"
+                        data-produto="Bolsa Feminina"
+                    >
+                        Conhecer produto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==================================
+                 PRODUTO 4
+                 BATOM
+            =================================== -->
+
+            <article
+                class="produto"
+                data-nome="Batom"
+                data-categoria="Beleza"
+            >
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="./img/batom.jpg"
+                        alt="Batom"
+                    >
+
+                    <span>
+                        Beleza
+                    </span>
+
+                </div>
+
+
+                <div class="produto-info">
+
+                    <small>
+                        Essência & Cia
+                    </small>
+
+                    <h3>
+                        Batom
+                    </h3>
+
+                    <p>
+                        Beleza e cuidado
+                        para diferentes ocasiões.
+                    </p>
+
+                    <strong class="preco">
+                        R$ 39,90
+                    </strong>
+
+
+                    <button
+                        class="btn-produto"
+                        type="button"
+                        data-produto="Batom"
+                    >
+                        Conhecer produto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         COMO FUNCIONA
+    =========================================== -->
+
+    <section
+        class="como-funciona"
+        id="como-funciona"
+    >
+
+        <div class="titulo-central">
+
+            <span>
+                COMO FUNCIONA
+            </span>
+
+            <h2>
+                Negociar ficou mais simples
+            </h2>
+
+            <p>
+                O ENGAJA aproxima clientes e lojas
+                em três passos.
+            </p>
+
+        </div>
+
+
+
+        <div class="passos">
+
+
+            <!-- PASSO 1 -->
+
+            <div class="passo">
+
+                <div class="numero">
+                    01
+                </div>
+
+                <div class="icone">
+                    🔎
+                </div>
+
+                <h3>
+                    Encontre
+                </h3>
+
+                <p>
+                    Pesquise produtos
+                    e descubra lojas.
+                </p>
+
+            </div>
+
+
+
+            <div class="linha"></div>
+
+
+
+            <!-- PASSO 2 -->
+
+            <div class="passo">
+
+                <div class="numero">
+                    02
+                </div>
+
+                <div class="icone">
+                    👁️
+                </div>
+
+                <h3>
+                    Conheça
+                </h3>
+
+                <p>
+                    Veja informações
+                    sobre o produto e a loja.
+                </p>
+
+            </div>
+
+
+
+            <div class="linha"></div>
+
+
+
+            <!-- PASSO 3 -->
+
+            <div class="passo">
+
+                <div class="numero">
+                    03
+                </div>
+
+                <div class="icone">
+                    💬
+                </div>
+
+                <h3>
+                    Negocie
+                </h3>
+
+                <p>
+                    Converse diretamente
+                    com a loja.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CHAMADA FINAL
+    =========================================== -->
+
+    <section class="chamada">
+
+        <div>
+
+            <span>
+                ENGAJA
+            </span>
+
+            <h2>
+
+                Sua experiência.
+
+                <strong>
+                    Sua influência.
+                </strong>
+
+            </h2>
+
+            <p>
+                Conectamos quem procura
+                a quem oferece.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="btnVoltarInicio"
+        >
+            Voltar ao início
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         RODAPÉ
+    =========================================== -->
+
+    <footer class="footer">
+
+
+        <!-- LOGO -->
+
+        <div class="footer-logo">
+
+            <img
+                src="./img/logo_engaja_lobo.png"
+                alt="Logo ENGAJA"
+            >
+
+            <div>
+
+                <h2>
+                    ENGA<span>JA</span>
+                </h2>
+
+                <p>
+                    Conexões que geram oportunidades.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EQUIPE -->
+
+        <div class="equipe-projeto">
+
+            <h3>
+                Equipe do Projeto ENGAJA
+            </h3>
+
+
+            <div class="nomes-equipe">
+
+                <span>
+                    Samuel Ravy
+                </span>
+
+                <span>
+                    Ana Safira
+                </span>
+
+                <span>
+                    Maria Gloria
+                </span>
+
+                <span>
+                    Francisco Alex
+                </span>
+
+                <span>
+                    Adriele de Souza
+                </span>
+
+                <span>
+                    Artur
+                </span>
+
+                <span>
+                    Francilio
+                </span>
+
+                <span>
+                    Dielson
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DIREITOS -->
+
+        <div class="footer-direitos">
+
+            <p>
+                © 2026 ENGAJA
+            </p>
+
+            <p>
+                Projeto Integrador
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         MODAL DE LOGIN
+    =========================================== -->
+
+    <div
+        class="modal-login"
+        id="modalLogin"
+    >
+
+        <div class="login-box">
+
+
+            <button
+                type="button"
+                class="fechar-login"
+                id="fecharLogin"
+            >
+                ×
+            </button>
+
+
+
+            <img
+                src="./img/logo_engaja_lobo.png"
+                alt="Logo ENGAJA"
+                class="logo-login"
+            >
+
+
+
+            <h2>
+                Entrar no ENGAJA
+            </h2>
+
+
+            <p>
+                Acesse seu perfil para acompanhar
+                suas negociações.
+            </p>
+
+
+
+            <form id="formLogin">
+
+
+                <label for="email">
+                    E-mail
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+
+
+                <label for="senha">
+                    Senha
+                </label>
+
+
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+
+
+                <button
+                    type="submit"
+                    class="btn-login"
+                >
+                    Entrar
+                </button>
+
+
+            </form>
+
+
+            <p class="login-aviso">
+
+                Área de login preparada
+                para a próxima etapa.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="./js/dashboard_principal.js"></script>
+
+
+</body>
+
+</html>

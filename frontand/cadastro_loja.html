@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ENGAJA | Cadastro de Loja</title>
+
+    <link rel="stylesheet" href="./css/cadastro_loja.css">
+    <script src="./js/cadastro_loja.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="./tela_inicial.html" class="logo-header">
+            <img src="./img/logo_engaja_lobo.png" alt="Logo ENGAJA">
+
+            <div>
+                <h1>ENGA<span>JA</span></h1>
+                <p>Conexões que geram oportunidades.</p>
+            </div>
+        </a>
+
+        <nav class="menu-header">
+            <a href="./tela_inicial.html">Início</a>
+            <a href="#ajuda">Ajuda</a>
+
+            <a href="./dashboard_principal.html" class="btn-voltar">
+                ← Voltar
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <section class="introducao">
+
+            <span class="mini-titulo">CADASTRO DE LOJA</span>
+
+            <h2>
+                Cadastre sua loja <span>no ENGAJA</span>
+            </h2>
+
+            <p>
+                Preencha as informações abaixo para criar o perfil
+                da sua loja e começar a divulgar seus produtos.
+            </p>
+
+        </section>
+
+
+        <!-- INDICADOR DE ETAPAS -->
+        <div class="etapas">
+
+            <div class="etapa ativa">
+                <span>1</span>
+                <p>Dados da loja</p>
+            </div>
+
+            <div class="linha-etapas"></div>
+
+            <div class="etapa">
+                <span>2</span>
+                <p>Endereço</p>
+            </div>
+
+            <div class="linha-etapas"></div>
+
+            <div class="etapa">
+                <span>3</span>
+                <p>Categorias</p>
+            </div>
+
+            <div class="linha-etapas"></div>
+
+            <div class="etapa">
+                <span>4</span>
+                <p>Confirmação</p>
+            </div>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <form id="formCadastroLoja" class="formulario" novalidate>
+
+            <!-- DADOS DA LOJA -->
+            <section class="bloco-formulario">
+
+                <div class="titulo-bloco">
+                    <div class="icone-bloco">▣</div>
+
+                    <div>
+                        <h3>1. Informações da loja</h3>
+                        <p>Dados básicos para identificar sua empresa.</p>
+                    </div>
+                </div>
+
+
+                <div class="grade grade-dupla">
+
+                    <div class="campo">
+                        <label for="nomeLoja">Nome da loja <span>*</span></label>
+
+                        <input
+                            type="text"
+                            id="nomeLoja"
+                            name="nomeLoja"
+                            placeholder="Ex.: Tech Store"
+                            maxlength="100"
+                            required
+                        >
+
+                        <small class="erro" id="erroNomeLoja"></small>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="cnpj">CNPJ <span>*</span></label>
+
+                        <input
+                            type="text"
+                            id="cnpj"
+                            name="cnpj"
+                            placeholder="00.000.000/0000-00"
+                            inputmode="numeric"
+                            maxlength="18"
+                            required
+                        >
+
+                        <small class="erro" id="erroCnpj"></small>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="responsavel">Nome do responsável <span>*</span></label>
+
+                        <input
+                            type="text"
+                            id="responsavel"
+                            name="responsavel"
+                            placeholder="Seu nome completo"
+                            maxlength="120"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small class="erro" id="erroResponsavel"></small>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="emailLoja">E-mail da loja <span>*</span></label>
+
+                        <input
+                            type="email"
+                            id="emailLoja"
+                            name="emailLoja"
+                            placeholder="exemplo@loja.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small class="erro" id="erroEmail"></small>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="telefone">Telefone / WhatsApp <span>*</span></label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            inputmode="tel"
+                            maxlength="15"
+                            autocomplete="tel"
+                            required
+                        >
+
+                        <small class="erro" id="erroTelefone"></small>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="senha">Senha de acesso <span>*</span></label>
+
+                        <div class="campo-senha">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="mostrar-senha"
+                                data-alvo="senha"
+                                aria-label="Mostrar

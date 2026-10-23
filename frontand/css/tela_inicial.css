@@ -1,0 +1,380 @@
+
+/* ==========================================
+   ENGAJA
+   TELA INICIAL
+========================================== */
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+
+/* ==========================================
+   TELA PRINCIPAL
+========================================== */
+
+.tela-inicial {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(80, 0, 0, 0.25),
+            transparent 35%
+        ),
+        #000;
+}
+
+
+/* ==========================================
+   EXPLORAR AGORA
+========================================== */
+
+.explorar {
+    position: absolute;
+    top: 10px;
+    right: 3%;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+
+    transition: color 0.2s;
+}
+
+.explorar span {
+    font-size: 22px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.explorar:hover {
+    color: #ff2028;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-area {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    max-width: 35vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.slogan {
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #ddd;
+}
+
+
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
+
+.apresentacao {
+    width: min(700px, 90%);
+    text-align: center;
+    margin-top: 28px;
+}
+
+.apresentacao h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.02;
+    font-weight: 800;
+}
+
+.apresentacao h1 span {
+    display: block;
+    color: #ff2028;
+}
+
+.apresentacao p {
+    max-width: 600px;
+    margin: 22px auto 0;
+
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   ACESSO AO MARKETPLACE
+========================================== */
+
+.acesso {
+    width: min(570px, 88%);
+    margin-top: 28px;
+    text-align: center;
+}
+
+.btn-acessar {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: #ff2028;
+    color: #fff;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 25px rgba(255, 0, 0, 0.25);
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.btn-acessar:hover {
+    background: #e9151d;
+    transform: translateY(-2px);
+}
+
+.btn-acessar strong {
+    font-size: 24px;
+}
+
+.texto-sem-conta {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   ÁREA DA LOJA
+========================================== */
+
+.area-loja {
+    width: min(570px, 88%);
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* SEPARADOR */
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.separador span {
+    height: 1px;
+    flex: 1;
+    background: #444;
+}
+
+.separador p {
+    color: #aaa;
+    font-size: 12px;
+}
+
+
+/* BOTÃO / LINK SOU UMA LOJA */
+
+.btn-loja {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 16px;
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+    border: 1px solid #ff2028;
+
+    background: transparent;
+    color: #fff;
+
+    /* Remove o sublinhado do link */
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+
+/* EVITA SUBLINHADO EM QUALQUER ESTADO */
+
+.btn-loja:link,
+.btn-loja:visited,
+.btn-loja:hover,
+.btn-loja:active {
+    text-decoration: none;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.btn-loja:hover {
+    background: #ff2028;
+    color: #fff;
+    border-color: #ff2028;
+    transform: translateY(-1px);
+}
+
+
+/* EFEITO AO CLICAR */
+
+.btn-loja:active {
+    transform: scale(0.99);
+}
+
+
+/* TEXTO ABAIXO DO BOTÃO */
+
+.texto-loja {
+    color: #999;
+    font-size: 10px;
+    margin-top: 9px;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    min-height: 70px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            ellipse at center top,
+            #850000,
+            #260000 70%
+        );
+
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+footer h2 {
+    font-size: 16px;
+}
+
+footer p {
+    margin-top: 4px;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #ddd;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .logo-area {
+        margin-top: 55px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .apresentacao {
+        margin-top: 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: 38px;
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+    }
+
+    .btn-acessar {
+        min-height: 50px;
+    }
+
+    .btn-loja {
+        min-height: 48px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+.btn-loja:focus-visible,
+.btn-acessar:focus-visible,
+.explorar:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}

@@ -1,0 +1,828 @@
+
+/* ==========================================
+   ENGAJA - CADASTRO DE LOJA
+========================================== */
+
+:root {
+    --vermelho: #ff2028;
+    --vermelho-escuro: #c90018;
+    --fundo: #080808;
+    --painel: #111111;
+    --campo: #191919;
+    --borda: #383838;
+    --texto: #ffffff;
+    --texto-suave: #aaaaaa;
+    --verde: #35c77a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(120, 0, 12, 0.22),
+            transparent 48%
+        ),
+        var(--fundo);
+
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 82px;
+    padding: 14px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    border-bottom: 1px solid var(--vermelho);
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-header img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.logo-header h1 {
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.logo-header h1 span,
+.rodape h2 span {
+    color: var(--vermelho);
+}
+
+.logo-header p {
+    margin-top: 4px;
+    color: var(--texto-suave);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.menu-header > a:not(.btn-voltar):hover {
+    color: var(--vermelho);
+}
+
+.btn-voltar {
+    padding: 9px 22px;
+    border: 1px solid var(--vermelho);
+    border-radius: 25px;
+    transition: background 0.2s;
+}
+
+.btn-voltar:hover {
+    background: var(--vermelho);
+}
+
+
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
+
+.conteudo {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 42px 0 65px;
+}
+
+.introducao {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.mini-titulo {
+    color: var(--vermelho);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.introducao h2 {
+    margin-top: 8px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.introducao h2 span {
+    color: var(--vermelho);
+}
+
+.introducao > p {
+    max-width: 580px;
+    margin: 12px auto 0;
+    color: #bdbdbd;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   ETAPAS
+========================================== */
+
+.etapas {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 760px;
+    margin: 35px auto 27px;
+}
+
+.etapa {
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+.etapa > span {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #626262;
+    border-radius: 50%;
+    background: #111;
+    font-weight: 700;
+}
+
+.etapa p {
+    font-size: 12px;
+}
+
+.etapa.ativa {
+    color: var(--vermelho);
+    font-weight: 700;
+}
+
+.etapa.ativa > span {
+    background: var(--vermelho);
+    border-color: var(--vermelho);
+    color: #fff;
+}
+
+.linha-etapas {
+    flex: 1;
+    max-width: 150px;
+    height: 1px;
+    margin-top: 16px;
+    background: #454545;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.formulario {
+    overflow: hidden;
+    border: 1px solid rgba(255, 32, 40, 0.65);
+    border-radius: 19px;
+    background: rgba(15, 15, 15, 0.97);
+    box-shadow: 0 15px 55px rgba(0, 0, 0, 0.3);
+}
+
+.bloco-formulario {
+    padding: 25px 28px;
+    border-bottom: 1px solid #303030;
+}
+
+.titulo-bloco {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.icone-bloco {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        var(--vermelho),
+        var(--vermelho-escuro)
+    );
+
+    font-size: 23px;
+}
+
+.titulo-bloco h3 {
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.titulo-bloco p {
+    margin-top: 3px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.grade {
+    display: grid;
+    gap: 17px 22px;
+}
+
+.grade-dupla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grade-endereco {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.campo {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.campo label span {
+    color: var(--vermelho);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+
+    color: #fff;
+    border: 1px solid #484848;
+    border-radius: 7px;
+    background: var(--campo);
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #858585;
+}
+
+.campo select {
+    color-scheme: dark;
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(255, 32, 40, 0.12);
+}
+
+.campo input.invalido,
+.campo select.invalido,
+.campo textarea.invalido {
+    border-color: var(--vermelho);
+}
+
+.ajuda-campo {
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.erro {
+    min-height: 0;
+    color: #ff6670;
+    font-size: 12px;
+}
+
+.erro:empty {
+    display: none;
+}
+
+
+/* ==========================================
+   SENHA
+========================================== */
+
+.campo-senha {
+    position: relative;
+    display: flex;
+}
+
+.campo-senha input {
+    padding-right: 48px;
+}
+
+.mostrar-senha {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+
+    border: 0;
+    border-radius: 5px;
+    color: #ddd;
+    background: transparent;
+    font-size: 19px;
+}
+
+.mostrar-senha:hover {
+    color: var(--vermelho);
+}
+
+
+/* ==========================================
+   ENDEREÇO
+========================================== */
+
+.campo-rua {
+    grid-column: span 2;
+}
+
+.campo-complemento,
+.campo-bairro {
+    grid-column: span 1;
+}
+
+
+/* ==========================================
+   CATEGORIAS
+========================================== */
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.categoria-opcao {
+    position: relative;
+    min-height: 120px;
+    padding: 15px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 1px solid #3e3e3e;
+    border-radius: 9px;
+    background: #111;
+    text-align: center;
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s,
+        background 0.2s,
+        transform 0.2s;
+}
+
+.categoria-opcao:hover {
+    transform: translateY(-2px);
+    border-color: var(--vermelho);
+}
+
+.categoria-opcao:has(input:checked) {
+    border-color: var(--vermelho);
+    background: rgba(255, 32, 40, 0.1);
+}
+
+.categoria-opcao input {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    accent-color: var(--vermelho);
+}
+
+.categoria-icone {
+    font-size: 27px;
+}
+
+.categoria-opcao strong {
+    font-size: 12px;
+}
+
+.categoria-opcao small {
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+
+/* ==========================================
+   ENVIO DA LOGO
+========================================== */
+
+.area-upload {
+    min-height: 120px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border: 1px dashed #686868;
+    border-radius: 9px;
+    background: #151515;
+
+    cursor: pointer;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.area-upload:hover {
+    border-color: var(--vermelho);
+}
+
+.icone-upload {
+    color: var(--vermelho);
+    font-size: 30px;
+}
+
+.area-upload strong {
+    font-size: 12px;
+}
+
+.area-upload small {
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.preview-logo {
+    width: 90px;
+    height: 90px;
+    margin-top: 12px;
+
+    object-fit: contain;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.contador {
+    color: var(--texto-suave);
+    text-align: right;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   ACEITE E BOTÃO DE CADASTRO
+========================================== */
+
+.area-final {
+    padding: 25px 28px 23px;
+}
+
+.aceite {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: #d0d0d0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.aceite input {
+    margin-top: 3px;
+    accent-color: var(--vermelho);
+}
+
+.btn-cadastrar {
+    width: 100%;
+    min-height: 49px;
+    margin-top: 20px;
+    padding: 13px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 30px;
+    background: var(--vermelho);
+    color: #fff;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 25px rgba(255, 30, 45, 0.18);
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.btn-cadastrar span {
+    font-size: 20px;
+}
+
+.btn-cadastrar:hover {
+    transform: translateY(-1px);
+    background: #e80019;
+}
+
+.btn-cadastrar:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.aviso-seguranca {
+    margin-top: 13px;
+    color: #858585;
+    text-align: center;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   MENSAGEM DE SUCESSO DA DEMONSTRAÇÃO
+========================================== */
+
+.mensagem-sucesso {
+    margin-top: 25px;
+    padding: 30px;
+
+    border: 1px solid var(--verde);
+    border-radius: 12px;
+    background: #101713;
+    text-align: center;
+}
+
+.sucesso-icone {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: var(--verde);
+    color: #06150b;
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.mensagem-sucesso h2 {
+    color: var(--verde);
+}
+
+.mensagem-sucesso p {
+    max-width: 600px;
+    margin: 10px auto 20px;
+    color: #c8c8c8;
+    font-size: 14px;
+}
+
+.btn-voltar-formulario {
+    padding: 11px 20px;
+    border: 1px solid var(--verde);
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+}
+
+.btn-voltar-formulario:hover {
+    background: #193b27;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.rodape {
+    padding: 28px 20px;
+    border-top: 2px solid var(--vermelho-escuro);
+
+    background: linear-gradient(
+        180deg,
+        #240000,
+        #090000
+    );
+
+    text-align: center;
+}
+
+.rodape h2 {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.rodape p {
+    margin: 4px 0 13px;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.rodape a {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.rodape a:hover {
+    color: var(--vermelho);
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .categorias-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grade-endereco {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campo-rua,
+    .campo-complemento,
+    .campo-bairro {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        padding: 14px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-header {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 13px;
+    }
+
+    .btn-voltar {
+        margin-left: auto;
+    }
+
+    .conteudo {
+        width: 94%;
+        padding-top: 30px;
+    }
+
+    .introducao h2 {
+        font-size: 29px;
+    }
+
+    .introducao > p {
+        font-size: 13px;
+    }
+
+    .etapas {
+        align-items: flex-start;
+    }
+
+    .etapa {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .etapa p {
+        max-width: 80px;
+        font-size: 10px;
+    }
+
+    .linha-etapas {
+        flex: 0.5;
+    }
+
+    .bloco-formulario {
+        padding: 20px 15px;
+    }
+
+    .grade-dupla,
+    .grade-endereco {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-rua,
+    .campo-complemento,
+    .campo-bairro {
+        grid-column: auto;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .area-final {
+        padding: 22px 15px;
+    }
+
+    .titulo-bloco h3 {
+        font-size: 14px;
+    }
+
+    .titulo-bloco p {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+
+}
